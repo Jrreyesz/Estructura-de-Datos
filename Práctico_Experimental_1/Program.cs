@@ -2,6 +2,7 @@
 {
     public static void Main(string[] args)
     {
+        //Creamos citas para la agenda asignándo todos sus atributos
         Cita cita1 = new Cita();
         DateTime Cita1Fecha = new DateTime(2025, 6, 19, 8, 30, 0);
         cita1.crearCita("Jinsonp", "Reyes Zambrano", Cita1Fecha);
@@ -14,8 +15,10 @@
         DateTime Cita3Fecha = new DateTime(2025, 12, 30, 19, 0, 0);
         cita3.crearCita("Henry", "Marin Ávila", Cita3Fecha);
 
+        //Creamos un array con todas las citas de la agenda
         Cita[] agendamientos = new Cita[] { cita1, cita2, cita3 };
 
+        //Visualizamos y consultamos las citas de la agenda
         for (int i = 0; i < agendamientos.Length; i++)
         {
             Console.WriteLine(agendamientos[i]);
