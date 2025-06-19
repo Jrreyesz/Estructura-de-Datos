@@ -15,7 +15,9 @@ public struct Cita
         this.FechaHora = _FechaHora;
     }
 
-
-
+    public override string ToString()
+    {
+        return $"Cita con {Nombre} {Apellidos} el {FechaHora}";
+    }
 
 }
