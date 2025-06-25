@@ -9,7 +9,7 @@
 
         Cita cita2 = new Cita();
         DateTime Cita2Fecha = new DateTime(2025, 8, 26, 9, 45, 0);
-        cita2.crearCita("Bryan", "Reyes Zambrano", Cita2Fecha);
+        cita2.crearCita("Bryan", "Reyes León", Cita2Fecha);
 
         Cita cita3 = new Cita();
         DateTime Cita3Fecha = new DateTime(2025, 12, 30, 19, 0, 0);
@@ -18,10 +18,22 @@
         //Creamos un array con todas las citas de la agenda
         Cita[] agendamientos = new Cita[] { cita1, cita2, cita3 };
 
-        //Visualizamos y consultamos las citas de la agenda
+        //Visualizamos las citas de la agenda
         for (int i = 0; i < agendamientos.Length; i++)
         {
             Console.WriteLine(agendamientos[i]);
+        }
+
+        for (int i = 0; i < agendamientos.Length; i++)
+        {
+            if ("Reyes Zambrano" == agendamientos[i]._Apellidos)
+            {
+                Console.WriteLine($"El paciente {agendamientos[i]._Apellidos} tiene su cita el {agendamientos[i]._FechaHora}");
+            }
+            else
+            {
+                Console.WriteLine("El paciente no tiene cita.");
+            }
         }
 
         
