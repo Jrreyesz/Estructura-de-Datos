@@ -24,15 +24,12 @@
             Console.WriteLine(agendamientos[i]);
         }
 
+        //Buscamos una cita en el agendamiento
         for (int i = 0; i < agendamientos.Length; i++)
         {
-            if ("Reyes Zambrano" == agendamientos[i]._Apellidos)
+            if ("Reyes Zambrano" == agendamientos[i].apellidos)
             {
-                Console.WriteLine($"El paciente {agendamientos[i]._Apellidos} tiene su cita el {agendamientos[i]._FechaHora}");
-            }
-            else
-            {
-                Console.WriteLine("El paciente no tiene cita.");
+                Console.WriteLine($"El paciente {agendamientos[i].apellidos} tiene su cita el {agendamientos[i].fechahora}");
             }
         }
 
