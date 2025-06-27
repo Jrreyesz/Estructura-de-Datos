@@ -21,23 +21,28 @@
             notas.Add(nota);
         }
 
-        List<string> reprobadas = [];
-
-        for (int i = 0; i < asignaturas.Count; i++)
+        for (int i = 0; i < notas.Count; i++)
         {
-            if (notas[i] < 7)
-            {
-                reprobadas.Add(asignaturas[i]);
-            }
+            System.Console.WriteLine(notas[i]);
         }
+        //List<string> reprobadas = [];
 
-        System.Console.WriteLine("");
-        System.Console.WriteLine("Materias Reprobadas");
-        System.Console.WriteLine("");
+        //for (int i = 0; i < asignaturas.Count; i++)
+        //{
+        //    if (notas[i] < 7)
+        //    {
+        //        reprobadas.Add(asignaturas[i]);
+        //    }
+        //}
 
-        foreach (var materia in reprobadas)
-        {
-            System.Console.WriteLine(materia);
-        }
+        //System.Console.WriteLine("");
+        //System.Console.WriteLine("Materias Reprobadas");
+        //System.Console.WriteLine("");
+
+        //foreach (var materia in reprobadas)
+        //{
+        //    System.Console.WriteLine(materia);
+        //}
+        //
     }
 }
