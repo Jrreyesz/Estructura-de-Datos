@@ -3,22 +3,39 @@
     static void Main(string[] args)
     {
         List<string> asignaturas = ["Matemáticas", "Física", "Química", "Historia", "Lengua"];
-        List<float> notas = [];
+        List<string> notas = [];
 
         for (int i = 0; i < asignaturas.Count; i++)
         {
             System.Console.WriteLine($"Ingrese la nota de la materia de {asignaturas[i]}: ");
-            float nota = Console.ReadLine();
+            string nota = Console.ReadLine();
             notas.Add(nota);
         }
 
-        for (int i = 0; i < asignaturas.Count; i++)
+        for (int i = 0; i < notas.Count; i++)
         {
-            if (notas[i] >= 7)
+            float num;
+            num = float.Parse(notas[i]);
+            notas.Add(num);
+        }
+
+        for (int i = 0; i < notas.Count; i++)
+        {
+            if (notas[i] is string)
             {
-                asignaturas.Remove(asignaturas[i]);
+                notas.Remove(notas[i]);
             }
         }
+
+        for (int i = 0; i < asignaturas.Count; i++)
+            {
+                if (notas[i] >= 7)
+                {
+                    asignaturas.Remove(asignaturas[i]);
+                }
+            }
+
+        
 
         System.Console.WriteLine("");
         System.Console.WriteLine("Materias Reprobadas");
