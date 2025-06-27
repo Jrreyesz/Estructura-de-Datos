@@ -16,7 +16,7 @@
         {
             float num;
             num = float.Parse(notas[i]);
-            notas.Add(num);
+            System.Console.WriteLine(num);
         }
 
         for (int i = 0; i < notas.Count; i++)
