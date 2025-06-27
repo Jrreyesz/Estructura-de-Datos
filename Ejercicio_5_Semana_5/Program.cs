@@ -21,19 +21,21 @@
             notas.Add(nota);
         }
 
+        List<string> reprobadas = [];
+
         for (int i = 0; i < asignaturas.Count; i++)
+        {
+            if (notas[i] < 7)
             {
-               if (notas[i] >= 7)
-                {
-                    asignaturas.Remove(asignaturas[i]);
-                }
+                reprobadas.Add(materias[i]);
             }
+        }
 
         System.Console.WriteLine("");
         System.Console.WriteLine("Materias Reprobadas");
         System.Console.WriteLine("");
 
-        foreach (var materia in asignaturas)
+        foreach (var materia in reprobadas)
         {
             System.Console.WriteLine(materia);
         }
