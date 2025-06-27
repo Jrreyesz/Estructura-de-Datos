@@ -7,7 +7,7 @@
 
         for (int i = 0; i < 6; i++)
         {
-            System.Console.WriteLine($"Ingrese el número {i} ganador de la loteria: ");
+            System.Console.WriteLine($"Ingrese el número {i+1} ganador de la loteria: ");
             string numGanador = Console.ReadLine();
             numsGanadores.Add(numGanador);
         }
