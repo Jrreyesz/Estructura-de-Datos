@@ -7,7 +7,7 @@
 
         for (int i = 0; i < asignaturas.Count; i++)
         {
-            System.Console.WriteLine($"Ingrese la nota de la materia de {asignaturas[i]}: ");
+            Console.WriteLine($"Ingrese la nota de la materia de {asignaturas[i]}: ");
             string entrada = Console.ReadLine();
             double nota;
 
@@ -23,7 +23,7 @@
 
         for (int i = 0; i < notas.Count; i++)
         {
-            System.Console.WriteLine($"{asignaturas[i]}: {notas[i]}");
+            Console.WriteLine($"{asignaturas[i]}: {notas[i]}");
         }
         //List<string> reprobadas = [];
 
