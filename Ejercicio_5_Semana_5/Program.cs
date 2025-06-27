@@ -23,7 +23,7 @@
 
         for (int i = 0; i < notas.Count; i++)
         {
-            System.Console.WriteLine(notas[i]);
+            System.Console.WriteLine($"{asignaturas[i]}: {notas[i]}");
         }
         //List<string> reprobadas = [];
 
