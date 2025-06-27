@@ -12,7 +12,7 @@
             double nota;
 
             // Validar que la entrada sea un número
-            while (!double.TryParse(entrada, out nota))
+            while (!double.TryParse(entrada, NumberStyles.Any, CultureInfo.InvariantCulture, out nota))
             {
                 Console.WriteLine("Entrada inválida. Ingrese un número válido:");
                 entrada = Console.ReadLine();
