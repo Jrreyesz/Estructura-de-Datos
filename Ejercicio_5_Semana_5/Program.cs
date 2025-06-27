@@ -3,12 +3,13 @@
     static void Main(string[] args)
     {
         List<string> asignaturas = ["Matemáticas", "Física", "Química", "Historia", "Lengua"];
-        List<string> notas = [];
+        List<double> notas = [];
 
         for (int i = 0; i < asignaturas.Count; i++)
         {
             System.Console.WriteLine($"Ingrese la nota de la materia de {asignaturas[i]}: ");
             string nota = Console.ReadLine();
+            double nota;
             notas.Add(nota);
         }
 
@@ -19,8 +20,6 @@
                     asignaturas.Remove(asignaturas[i]);
                 }
             }
-
-        
 
         System.Console.WriteLine("");
         System.Console.WriteLine("Materias Reprobadas");
