@@ -19,21 +19,21 @@
             System.Console.WriteLine(num);
         }
 
-        for (int i = 0; i < notas.Count; i++)
-        {
-            if (notas[i] is string)
-            {
+        //for (int i = 0; i < notas.Count; i++)
+        //{
+        //    if (notas[i] is string)
+        //    {
                 notas.Remove(notas[i]);
-            }
-        }
+        //    }
+        //}
 
-        for (int i = 0; i < asignaturas.Count; i++)
-            {
-                if (notas[i] >= 7)
-                {
-                    asignaturas.Remove(asignaturas[i]);
-                }
-            }
+        //for (int i = 0; i < asignaturas.Count; i++)
+        //    {
+        //       if (notas[i] >= 7)
+        //        {
+        //            asignaturas.Remove(asignaturas[i]);
+        //        }
+        //    }
 
         
 
