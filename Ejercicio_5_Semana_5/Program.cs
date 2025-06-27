@@ -8,7 +8,7 @@
         for (int i = 0; i < asignaturas.Count; i++)
         {
             System.Console.WriteLine($"Ingrese la nota de la materia de {asignaturas[i]}: ");
-            string nota = Console.ReadLine();
+            string entrada = Console.ReadLine();
             double nota;
 
             // Validar que la entrada sea un número
