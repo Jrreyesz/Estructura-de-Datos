@@ -14,8 +14,7 @@
 
         for (int i = 0; i < notas.Count; i++)
         {
-            float num;
-            num = float.Parse(notas[i]);
+            float num = float.Parse(notas[i]);
             System.Console.WriteLine(num);
         }
 
