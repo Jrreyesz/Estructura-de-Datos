@@ -29,24 +29,25 @@ class Program
         {
             Console.WriteLine($"{asignaturas[i]}: {notas[i]}");
         }
-        //List<string> reprobadas = [];
 
-        //for (int i = 0; i < asignaturas.Count; i++)
-        //{
-        //    if (notas[i] < 7)
-        //    {
-        //        reprobadas.Add(asignaturas[i]);
-        //    }
-        //}
+        List<string> reprobadas = [];
 
-        //System.Console.WriteLine("");
-        //System.Console.WriteLine("Materias Reprobadas");
-        //System.Console.WriteLine("");
+        for (int i = 0; i < asignaturas.Count; i++)
+        {
+            if (notas[i] < 7)
+            {
+                reprobadas.Add(asignaturas[i]);
+            }
+        }
 
-        //foreach (var materia in reprobadas)
-        //{
-        //    System.Console.WriteLine(materia);
-        //}
-        //
+        System.Console.WriteLine("");
+        System.Console.WriteLine("Materias Reprobadas");
+        System.Console.WriteLine("");
+
+        foreach (var materia in reprobadas)
+        {
+            System.Console.WriteLine(materia);
+        }
+        
     }
 }
