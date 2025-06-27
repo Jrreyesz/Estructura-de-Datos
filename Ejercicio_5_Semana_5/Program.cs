@@ -23,7 +23,7 @@
         //{
         //    if (notas[i] is string)
         //    {
-                notas.Remove(notas[i]);
+         //       notas.Remove(notas[i]);
         //    }
         //}
 
