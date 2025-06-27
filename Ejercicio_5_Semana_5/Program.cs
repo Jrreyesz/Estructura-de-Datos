@@ -27,7 +27,7 @@
         {
             if (notas[i] < 7)
             {
-                reprobadas.Add(materias[i]);
+                reprobadas.Add(asignaturas[i]);
             }
         }
 
