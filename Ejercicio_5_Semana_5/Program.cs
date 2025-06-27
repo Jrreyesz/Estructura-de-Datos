@@ -10,6 +10,14 @@
             System.Console.WriteLine($"Ingrese la nota de la materia de {asignaturas[i]}: ");
             string nota = Console.ReadLine();
             double nota;
+
+            // Validar que la entrada sea un número
+            while (!double.TryParse(entrada, out nota))
+            {
+                Console.WriteLine("Entrada inválida. Ingrese un número válido:");
+                entrada = Console.ReadLine();
+            }
+
             notas.Add(nota);
         }
 
