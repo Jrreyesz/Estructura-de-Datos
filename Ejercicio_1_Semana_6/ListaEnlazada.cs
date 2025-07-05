@@ -11,7 +11,7 @@ public class ListaEnlazada
         Nodo nuevo = new Nodo(valor);
         if (head == null)
         {
-            head == nuevo;
+            head = nuevo;
         }
         else
         {
