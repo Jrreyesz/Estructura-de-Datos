@@ -5,7 +5,8 @@ public class ListaEnlazada
     {
         head = null;
     }
-
+    
+    //Crea un método para añadir elementos 
     public void añadir(string valor)
     {
         Nodo nuevo = new Nodo(valor);
@@ -24,6 +25,7 @@ public class ListaEnlazada
         }
     }
 
+    //Crea un método para contar los elementos
     public int contar()
     {
         int contador = 0;
