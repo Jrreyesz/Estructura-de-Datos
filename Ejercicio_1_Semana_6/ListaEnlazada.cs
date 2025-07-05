@@ -3,7 +3,7 @@ public class ListaEnlazada
     private Nodo head;
     public ListaEnlazada()
     {
-        cabeza = null;
+        head = null;
     }
 
     public void añadir(string valor)
