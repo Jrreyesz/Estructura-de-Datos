@@ -6,7 +6,7 @@ public class ListaEnlazada
         cabeza = null;
     }
 
-    public void añadir(sitrng valor)
+    public void añadir(string valor)
     {
         Nodo nuevo = new Nodo(valor);
         if (head == null)
