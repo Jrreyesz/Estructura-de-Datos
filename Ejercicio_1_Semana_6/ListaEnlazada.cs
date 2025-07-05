@@ -30,7 +30,7 @@ public class ListaEnlazada
         Nodo actual = head;
         while (actual != null)
         {
-            contador++;
+            contador += 1;
             actual = actual.siguientenodo;
         }
         return contador;
