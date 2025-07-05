@@ -11,7 +11,7 @@
         lista.añadir("Moras");
         lista.añadir("Piñas");
 
-        lista.contar();
+        System.Console.WriteLine($"El número de elementos de la lista es: {lista.contar()}");
 
     }
 }
