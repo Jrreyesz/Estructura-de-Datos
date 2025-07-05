@@ -1,6 +1,6 @@
 public class Nodo
 {
-    public string Dato;
+    public string Valor;
     public Nodo siguientenodo;
 
     public Nodo(string valor)
