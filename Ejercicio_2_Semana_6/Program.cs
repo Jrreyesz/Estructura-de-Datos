@@ -11,6 +11,6 @@
         lista.añadir(3);
         lista.añadir(16);
 
-        System.Console.WriteLine($"El número de veces que aparece el valor es {lista.contarvalor(20)}");
+        System.Console.WriteLine($"El número de veces que aparece el valor es {lista.contarvalor(5)}");
     }
 }
