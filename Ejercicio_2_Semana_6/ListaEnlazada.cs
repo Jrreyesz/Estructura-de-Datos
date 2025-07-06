@@ -30,7 +30,7 @@ public class ListaEnlazada
         Nodo actual = head;
         while (actual != null)
         {
-            if (valorBuscado == actual)
+            if (valorBuscado == actual.valor)
             {
                 contador++;
             }
