@@ -36,6 +36,10 @@ public class ListaEnlazada
             }
             actual = actual.nodosiguiente;
         }
+        if (contador == 0)
+        {
+            System.Console.WriteLine("El valor no existe en la lista.");
+        }
         return contador;
     }
 }
