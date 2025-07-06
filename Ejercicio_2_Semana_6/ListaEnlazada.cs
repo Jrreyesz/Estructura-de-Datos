@@ -23,4 +23,19 @@ public class ListaEnlazada
             actual.nodosiguiente = nuevo;
         }
     }
+
+    public int contarvalor(int valorBuscado)
+    {
+        int contador = 0;
+        Nodo actual = head;
+        while (actual != null)
+        {
+            if (valorBuscado == actual)
+            {
+                contador++;
+            }
+            actual = actual.nodosiguiente;
+        }
+        return contador;
+    }
 }
