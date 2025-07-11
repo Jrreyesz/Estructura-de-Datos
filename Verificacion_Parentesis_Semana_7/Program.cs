@@ -8,7 +8,7 @@ foreach (var e in ecuacion)
     string elementoCast = elemento.ToString();
     if (elementoCast == "(" || elementoCast == ")" || elementoCast == "[" || elementoCast == "]" || elementoCast == "{" || elementoCast == "}")
     {
-        System.Console.WriteLine(elementoCast.GetType());
+        cantSignosAgrupacion.Push(elementoCast);
     }
 }
 
@@ -19,36 +19,36 @@ int contadorCorchetesC = 0;
 int contadorLlavesA = 0;
 int contadorLlavesC = 0;
 
-//foreach (var signo in cantSignosAgrupacion)
-//{
-//    if (signo == "(")
-//    {
-//        contadorParentsisA++;
-//    }
-//    else if (signo == ")")
-//    {
-//        contadorParentsisC++;
-//    }
-//    else if (signo == "[")
-//    {
-//        contadorCorchetesA++;
-//   }
-//    else if (signo == "]")
-//    {
-//        contadorCorchetesC++;
-//    }
-//    else if (signo == "{")
-//    {
-//        contadorLlavesA++;
-//    }
-//    else if (signo == "}")
-//    {
-//        contadorLlavesC++;
-//    }
+foreach (var signo in cantSignosAgrupacion)
+{
+    if (signo == "(")
+    {
+        contadorParentsisA++;
+    }
+    else if (signo == ")")
+    {
+        contadorParentsisC++;
+    }
+    else if (signo == "[")
+    {
+        contadorCorchetesA++;
+    }
+    else if (signo == "]")
+    {
+        contadorCorchetesC++;
+    }
+    else if (signo == "{")
+    {
+        contadorLlavesA++;
+    }
+    else if (signo == "}")
+    {
+        contadorLlavesC++;
+    }
 
-//}
+}
 
-//if (contadorParentsisA == contadorParentsisC && contadorCorchetesA == contadorCorchetesC && contadorLlavesA == contadorLlavesC)
-//{
-//    System.Console.WriteLine("Fórmula balanceada.");
-//}
+if (contadorParentsisA == contadorParentsisC && contadorCorchetesA == contadorCorchetesC && contadorLlavesA == contadorLlavesC)
+{
+    System.Console.WriteLine("Fórmula balanceada.");
+}
