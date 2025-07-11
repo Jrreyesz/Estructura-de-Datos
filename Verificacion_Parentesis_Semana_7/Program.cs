@@ -1,13 +1,12 @@
 ﻿string ecuacion = "{2 + 3(8/3) + (2/3) / [(2*3)/2]}";
 
-Stack<string> cantSignosAgrupacion = new Stack<string>();
+Stack<char> cantSignosAgrupacion = new Stack<char>();
 
 foreach (var e in ecuacion)
 {
     if (e == "(" || e == ")" || e == "[" || e == "]" || e == "{" || e == "}")
     {
-        string elementoCast = e.ToString();
-        cantSignosAgrupacion.Push(elementoCast);
+        cantSignosAgrupacion.Push(e);
     }
 }
 
@@ -18,29 +17,29 @@ int contadorCorchetesC = 0;
 int contadorLlavesA = 0;
 int contadorLlavesC = 0;
 
-for (int i = 0; i < cantSignosAgrupacion.Count(); i++)
+foreach (var signo in cantSignosAgrupacion)
 {
-    if (cantSignosAgrupacion[i] == "(")
+    if (signo == "(")
     {
         contadorParentsisA++;
     }
-    else if (cantSignosAgrupacion[i] == ")")
+    else if (signo == ")")
     {
         contadorParentsisC++;
     }
-    else if (cantSignosAgrupacion[i] == "[")
+    else if (signo == "[")
     {
         contadorCorchetesA++;
     }
-    else if (cantSignosAgrupacion[i] == "]")
+    else if (signo == "]")
     {
         contadorCorchetesC++;
     }
-    else if (cantSignosAgrupacion[i] == "{")
+    else if (signo == "{")
     {
         contadorLlavesA++;
     }
-    else if (cantSignosAgrupacion[i] == "}")
+    else if (signo == "}")
     {
         contadorLlavesC++;
     }
