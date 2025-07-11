@@ -6,7 +6,7 @@ foreach (var e in ecuacion)
 {
     if (e == "(" || e == ")" || e == "[" || e == "]" || e == "{" || e == "}")
     {
-        cantSignosAgrupacion.Push(e);
+        cantSignosAgrupacion.Push(e.ToString());
     }
 }
 
