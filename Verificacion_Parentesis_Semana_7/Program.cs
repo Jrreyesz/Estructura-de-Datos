@@ -1,10 +1,12 @@
 ﻿string ecuacion = "{2 + 3(8/3) + (2/3) / [(2*3)/2]}";
 
-Stack<char> cantSignosAgrupacion = new Stack<char>();
+Stack<string> cantSignosAgrupacion = new Stack<string>();
 
 foreach (var e in ecuacion)
 {
-    if (e == "(" || e == ")" || e == "[" || e == "]" || e == "{" || e == "}")
+    char elemento = e;
+    string elementoCast = elemento.ToString();
+    if (elementoCast == "(" || elementoCast == ")" || elementoCast == "[" || elementoCast == "]" || elementoCast == "{" || elementoCast == "}")
     {
         System.Console.WriteLine(e.GetType());
     }
