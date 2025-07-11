@@ -46,3 +46,7 @@ for (int i = 0; i < cantSignosAgrupacion.Count(); i++)
 
 }
 
+if (contadorParentsisA == contadorParentsisC && contadorCorchetesA == contadorCorchetesC && contadorLlavesA == contadorLlavesC)
+{
+    System.Console.WriteLine("Fórmula balanceada.");
+}
