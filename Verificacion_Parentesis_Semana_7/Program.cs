@@ -1,4 +1,4 @@
-﻿string ecuacion = "{2 + 3(8/3) + (2/3) / [(2*3)/2]}";
+﻿string ecuacion = "{2 + 3(8/3) + (2/3) / [(2*3)/2}";
 
 Stack<string> cantSignosAgrupacion = new Stack<string>();
 
