@@ -7,7 +7,7 @@ foreach (var e in ecuacion)
     if (e == "(" || e == ")" || e == "[" || e == "]" || e == "{" || e == "}")
     {
         string elementoCast = e.ToString();
-        cantSignosAgrupacion.Push();
+        cantSignosAgrupacion.Push(elementoCast);
     }
 }
 
