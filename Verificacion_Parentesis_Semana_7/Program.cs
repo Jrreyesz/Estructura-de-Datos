@@ -4,11 +4,10 @@ Stack<string> cantSignosAgrupacion = new Stack<string>();
 
 foreach (var e in ecuacion)
 {
-    char elemento = e;
-    string elementoCast = elemento.ToString();
-    if (elementoCast == "(" || elementoCast == ")" || elementoCast == "[" || elementoCast == "]" || elementoCast == "{" || elementoCast == "}")
+    string e = e.ToString();
+    if (e == "(" || e == ")" || e == "[" || e == "]" || e== "{" || e == "}")
     {
-        System.Console.WriteLine(e.GetType());
+        System.Console.WriteLine(elementoCast.GetType());
     }
 }
 
