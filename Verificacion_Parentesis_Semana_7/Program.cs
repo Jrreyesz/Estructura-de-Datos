@@ -52,3 +52,7 @@ if (contadorParentsisA == contadorParentsisC && contadorCorchetesA == contadorCo
 {
     System.Console.WriteLine("Fórmula balanceada.");
 }
+else
+{
+    System.Console.WriteLine("La fórmula no está balanceada.");
+}
