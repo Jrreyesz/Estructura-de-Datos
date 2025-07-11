@@ -7,7 +7,7 @@ foreach (var e in ecuacion)
     string e = e.ToString();
     if (e == "(" || e == ")" || e == "[" || e == "]" || e== "{" || e == "}")
     {
-        System.Console.WriteLine(elementoCast.GetType());
+        System.Console.WriteLine(e.GetType());
     }
 }
 
