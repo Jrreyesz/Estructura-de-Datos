@@ -9,9 +9,18 @@ for (int i = 0; i < numDiscos; i++)
     origen.Push(i);
 }
 
-static void solucion()
+solucion(numDiscos, origen, destino, auxiliar, "Origen", "Destino", "Auxiliar");
+
+static void solucion(int n, Stack<int> origen, Stack<int> destino, Stack<int> auxiliar, string nombreOrigen, string nombreDestino, string nombreAuxiliar)
 {
-    
+    if (n == 1)
+    {
+        Mover(origen, destino, nombreOrigen, nombreDestino);
+        return;
+    }
+    solucion(n - 1, origen, auxiliar, destino, nombreOrigen, nombreAuxiliar, nombreDestino);
+    Mover(origen, destino, nombreOrigen, nombreDestino);
+    solucion(n - 1, auxiliar, destino, origen, nombreAuxiliar, nombreDestino, nombreOrigen);
 }
 
 static void Mover(Stack<int> desde, Stack<int> hacia, string nombreDesde, string nombreHacia)
