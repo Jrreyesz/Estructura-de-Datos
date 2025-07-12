@@ -1,4 +1,5 @@
-﻿int numDiscos = 4;
+﻿
+int numDiscos = 4;
 
 Stack<int> origen = new Stack<int>();
 Stack<int> auxiliar = new Stack<int>();
@@ -28,4 +29,9 @@ static void Mover(Stack<int> desde, Stack<int> hacia, string nombreDesde, string
     int disco = desde.Pop();
     hacia.Push(disco);
     System.Console.WriteLine($"Mover el disco {disco} de {nombreDesde} a {nombreHacia}");
+}
+
+foreach (int i in destino)
+{
+    System.Console.WriteLine(i);
 }
