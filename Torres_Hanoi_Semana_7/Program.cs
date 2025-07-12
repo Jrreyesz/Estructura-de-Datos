@@ -7,7 +7,7 @@ Stack<int> destino = new Stack<int>();
 
 for (int i = 0; i < numDiscos; i++)
 {
-    origen.Push(i);
+    origen.Push(i+1);
 }
 
 solucion(numDiscos, origen, destino, auxiliar, "Origen", "Destino", "Auxiliar");
