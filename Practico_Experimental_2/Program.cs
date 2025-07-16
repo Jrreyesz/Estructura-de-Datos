@@ -2,7 +2,7 @@
 
 int entradasDisponibles = 30;
 
-Stack<int> colaEntrada = new Satck<int>();
+Stack<int> colaEntrada = new Stack<int>();
 
 for (int entrada = 0; entrada < entradasDisponibles; entrada++)
 {
