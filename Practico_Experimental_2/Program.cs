@@ -40,7 +40,7 @@ string opcion = Console.ReadLine();
 
 switch (opcion)
 {
-    case 1:
+    case "1":
         if (entradasVendidas == 30)
         {
             System.Console.WriteLine("Todas las entradas han sido vendidas");
@@ -50,7 +50,7 @@ switch (opcion)
             System.Console.WriteLine($"Aun quedan {entradasVendidas - entradasDisponibles} entradas por vender.");
         }
         break;
-    case 2:
+    case "2":
         if (colaEntrada.Count == 0)
         {
             System.Console.WriteLine("Todos han entrada a la atracción.");
@@ -60,7 +60,7 @@ switch (opcion)
             System.Console.WriteLine("Aun no han ingresado todos a la atracción.");
         }
         break;
-    case 3:
+    case "3":
         break;
     
 }
