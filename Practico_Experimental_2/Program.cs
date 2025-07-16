@@ -1,20 +1,25 @@
 ﻿// Asignación de 30 asientos en orden de llegada, una vez que todos los asientos son vendidos
-int entradasVendidas = 0;
-int entradasDisponibles = 30;
 
+//Creamos dos variables una para entradas vendidas 
+int entradasVendidas = 0;
+int entradasTotales = 30;
+
+//Creamos una cola para simular la fila
 Queue<int> colaEntrada = new Queue<int>();
 
-for (int entrada = 0; entrada < entradasDisponibles; entrada++)
+
+//Creamos un bucle for para vender todas las entradas y las añadimos a la cola
+for (int entrada = 0; entrada < entradasTotales; entrada++)
 {
     colaEntrada.Enqueue(entrada + 1);
     entradasVendidas++;
 }
 
 System.Console.WriteLine("FILA: ");
-
+//Simulamos la fila
 foreach (int entrada in colaEntrada)
 {
-    if (entrada < entradasDisponibles)
+    if (entrada < entradasTotales)
     {
         System.Console.Write(entrada + ", ");
     }
@@ -26,18 +31,21 @@ foreach (int entrada in colaEntrada)
 
 System.Console.WriteLine("ENTRAR: ");
 
-for (int entrada = 0; entrada < entradasDisponibles; entrada++)
+//Aseguramos que cada persona entre en orden y lo eliminamos de la cola segun entre
+for (int entrada = 0; entrada < entradasTotales; entrada++)
 {
     System.Console.Write(colaEntrada.Dequeue() + ", ");
 }
 
-System.Console.WriteLine("Menu: ");
+//Creamos un menu 
+System.Console.WriteLine("\nMenu: ");
 System.Console.WriteLine("1. Consultar entradas disponibles");
 System.Console.WriteLine("2. Verificar si están todos dentro de la atracción");
 System.Console.WriteLine("3. Salir");
 System.Console.WriteLine("Elija una opción: ");
 string opcion = Console.ReadLine();
 
+//Creamos un switch para completar el menu y consultar distintos aspectos
 switch (opcion)
 {
     case "1":
@@ -47,7 +55,7 @@ switch (opcion)
         }
         else
         {
-            System.Console.WriteLine($"Aun quedan {entradasVendidas - entradasDisponibles} entradas por vender.");
+            System.Console.WriteLine($"Aun quedan {entradasVendidas - entradasTotales} entradas por vender.");
         }
         break;
     case "2":
@@ -62,5 +70,5 @@ switch (opcion)
         break;
     case "3":
         break;
-    
+
 }
