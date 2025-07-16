@@ -11,7 +11,7 @@ for (int entrada = 0; entrada < entradasDisponibles; entrada++)
 
 foreach (int entrada in colaEntrada)
 {
-    if (entrada < entradasDisponibles - 1)
+    if (entrada < entradasDisponibles)
     {
         System.Console.Write(entrada + ", ");
     }
