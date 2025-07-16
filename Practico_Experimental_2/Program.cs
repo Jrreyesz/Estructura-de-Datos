@@ -2,11 +2,11 @@
 
 int entradasDisponibles = 30;
 
-Queue<int> colaEntrada = new Queue<int>();
+Stack<int> colaEntrada = new Satck<int>();
 
 for (int entrada = 0; entrada < entradasDisponibles; entrada++)
 {
-    colaEntrada.Enqueue(entrada+1);
+    colaEntrada.Push(entrada+1);
 }
 
 System.Console.WriteLine("FILA: ");
@@ -19,7 +19,7 @@ foreach (int entrada in colaEntrada)
     }
     else
     {
-        System.Console.Write(entrada);
+        System.Console.Write(entrada + "\n");
     }
 }
 
@@ -27,5 +27,5 @@ System.Console.WriteLine("ENTRAR: ");
 
 for (int entrada = 0; entrada < entradasDisponibles; entrada++)
 {
-    System.Console.Write(colaEntrada.Dequeue() + ", ");
+    System.Console.Write(colaEntrada.Pop() + ", ");
 }
