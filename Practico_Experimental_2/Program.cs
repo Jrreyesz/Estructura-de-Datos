@@ -9,6 +9,8 @@ for (int entrada = 0; entrada < entradasDisponibles; entrada++)
     colaEntrada.Enqueue(entrada+1);
 }
 
+System.Console.WriteLine("FILA: ");
+
 foreach (int entrada in colaEntrada)
 {
     if (entrada < entradasDisponibles)
@@ -19,6 +21,5 @@ foreach (int entrada in colaEntrada)
     {
         System.Console.Write(entrada);
     }
-    
-    
 }
+
