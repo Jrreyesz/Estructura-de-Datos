@@ -25,7 +25,7 @@ foreach (int entrada in colaEntrada)
 
 System.Console.WriteLine("ENTRAR: ");
 
-while (colaEntrada)
+for (int entrada = 0; entrada < entradasDisponibles; entrada++)
 {
     System.Console.Write(colaEntrada.Dequeue() + ", ");
 }
