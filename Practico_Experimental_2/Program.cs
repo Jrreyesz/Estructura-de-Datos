@@ -1,5 +1,5 @@
 ﻿// Asignación de 30 asientos en orden de llegada, una vez que todos los asientos son vendidos
-int entradasVendidas = 1;
+int entradasVendidas = 0;
 int entradasDisponibles = 30;
 
 Queue<int> colaEntrada = new Queue<int>();
