@@ -1,2 +1,15 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Asignación de 30 asientos en orden de llegada, una vez que todos los asientos son vendidos
+
+int entradasDisponibles = 30;
+
+Queue<int> colaEntrada = new Queue<int>();
+
+for (int entrada = 0; entrada < entradasDisponibles; entrada++)
+{
+    colaEntrada.Enqueue(entrada+1);
+}
+
+foreach (int entrada in colaEntrada)
+{
+    System.Console.WriteLine(entrada);
+}
