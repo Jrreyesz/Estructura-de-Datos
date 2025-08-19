@@ -1,5 +1,5 @@
 ﻿
-HashSet<string> TotalCiudadanos = new HashSet<string> { };
+HashSet<string> CiudadanosNoVacunados = new HashSet<string> { };
 HashSet<string> CiudadanosPfizer = new HashSet<string> { };
 HashSet<string> CiudadanosAstraZeneca = new HashSet<string> { };
 
@@ -11,4 +11,7 @@ for (int i = 0; i < 500; i++)
     }
 }
 
-System.Console.WriteLine(CiudadanosPfizer);
+foreach (var i in CiudadanosPfizer)
+{
+    System.Console.WriteLine(i);
+}
