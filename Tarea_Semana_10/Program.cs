@@ -21,6 +21,9 @@ for (int i = 0; i < 500; i++)
 
 }
 
+HashSet<string> AmbasDosis = new HashSet<string> {CiudadanosPfizer};
+AmbasDosis.IntersectWith(CiudadanosAstraZeneca);
+
 System.Console.WriteLine("==========================Ciudadanos No Vacunados==========================");
 System.Console.WriteLine("");
 foreach (var c in CiudadanosNoVacunados)
@@ -31,7 +34,7 @@ System.Console.WriteLine("");
 
 System.Console.WriteLine("==========================Ciudadanos con Ambas Dosis==========================");
 System.Console.WriteLine("");
-foreach (var c in CiudadanosPfizer.UnionWith(CiudadanosAstraZeneca))
+foreach (var c in AmbasDosis)
 {
     System.Console.WriteLine(c);
 }
