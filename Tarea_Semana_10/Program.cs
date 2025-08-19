@@ -21,7 +21,8 @@ for (int i = 0; i < 500; i++)
 
 }
 
-HashSet<string> AmbasDosis = new HashSet<string> {CiudadanosPfizer.IntersectWith(CiudadanosAstraZeneca)};
+HashSet<string> AmbasDosis = new HashSet<string>(CiudadanosPfizer);
+AmbasDosis.IntersectWith(CiudadanosAstraZeneca);
 
 
 System.Console.WriteLine("==========================Ciudadanos No Vacunados==========================");
