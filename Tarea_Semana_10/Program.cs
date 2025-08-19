@@ -23,15 +23,15 @@ for (int i = 0; i < 500; i++)
 
 foreach (var i in CiudadanosNoVacunados)
 {
-    System.Console.Write(i, );
+    System.Console.Write($"{i}, ");
 }
 
 foreach (var i in CiudadanosPfizer)
 {
-    System.Console.Write(i, );
+    System.Console.Write($"{i}, ");
 }
 
 foreach (var i in CiudadanosAstraZeneca)
 {
-    System.Console.Write(i, );
+    System.Console.Write($"{i}, ");
 }
