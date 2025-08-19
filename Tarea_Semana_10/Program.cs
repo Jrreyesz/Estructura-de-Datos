@@ -9,11 +9,11 @@ for (int i = 0; i <= 500; i++)
     {
         CiudadanosPfizer.Add($"Ciudadano {i + 1}");
     }
-    if (i >= 30 && i < 150)
+    if (i >= 30 && i < 105)
     {
         CiudadanosAstraZeneca.Add($"Ciudadano {i + 1}");
     }
-    if (i > 150)
+    if (i > 105)
     {
         CiudadanosNoVacunados.Add($"Ciudadano {i}");
     }
