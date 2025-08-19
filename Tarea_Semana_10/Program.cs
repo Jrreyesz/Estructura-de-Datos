@@ -15,13 +15,39 @@ for (int i = 0; i < 500; i++)
     }
     if (i > 150)
     {
-        CiudadanosNoVacunados.Add($"Ciudadano {i + 1}");
+        CiudadanosNoVacunados.Add($"Ciudadano {i}");
     }
 
 
 }
 
-foreach (var i in CiudadanosNoVacunados)
+System.Console.WriteLine("==========================Ciudadanos No Vacunados==========================");
+System.Console.WriteLine("");
+foreach (var c in CiudadanosNoVacunados)
 {
-    System.Console.Write($"{i}, ");
+    System.Console.WriteLine(c);
+}
+System.Console.WriteLine("");
+
+System.Console.WriteLine("==========================Ciudadanos con Ambas Dosis==========================");
+System.Console.WriteLine("");
+foreach (var c in CiudadanosPfizer.UnionWith(CiudadanosAstraZeneca))
+{
+    System.Console.WriteLine(c);
+}
+System.Console.WriteLine("");
+
+System.Console.WriteLine("==========================Ciudadanos con Pfizer==========================");
+System.Console.WriteLine("");
+foreach (var c in CiudadanosPfizer)
+{
+    System.Console.WriteLine(c);
+}
+System.Console.WriteLine("");
+
+System.Console.WriteLine("==========================Ciudadanos con AstraZeneca=========================");
+System.Console.WriteLine("");
+foreach (var c in CiudadanosAstraZeneca)
+{
+    System.Console.WriteLine(c);
 }
