@@ -3,7 +3,7 @@ HashSet<string> CiudadanosNoVacunados = new HashSet<string> { };
 HashSet<string> CiudadanosPfizer = new HashSet<string> { };
 HashSet<string> CiudadanosAstraZeneca = new HashSet<string> { };
 
-for (int i = 0; i < 500; i++)
+for (int i = 0; i <= 500; i++)
 {
     if (i < 75)
     {
