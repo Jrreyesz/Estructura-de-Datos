@@ -31,11 +31,11 @@ AmbasDosis.IntersectWith(CiudadanosAstraZeneca);
 
 //Creamos un conjunto con los elementos de la diferencia entre los conjuntos de pfizer y astrazeneca
 HashSet<string> SoloPfizer = new HashSet<string>(CiudadanosPfizer);
-SoloPfizer.DifferenceWith(CiudadanosAstraZeneca);
+SoloPfizer.ExceptWith(CiudadanosAstraZeneca);
 
 //Creamos un conjunto con los elementos de la diferencia entre los conjuntos de astrazeneca y pfizer
 HashSet<string> SoloAstraZeneca = new HashSet<string>(CiudadanosAstraZeneca);
-SoloAstraZeneca.DifferenceWith(CiudadanosPfizer);
+SoloAstraZeneca.ExceptWith(CiudadanosPfizer);
 
 //Imprimir en pantalla las listas correspondientes
 System.Console.WriteLine("==========================Ciudadanos No Vacunados==========================");
