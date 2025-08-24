@@ -29,6 +29,14 @@ for (int i = 0; i <= 500; i++)
 HashSet<string> AmbasDosis = new HashSet<string>(CiudadanosPfizer);
 AmbasDosis.IntersectWith(CiudadanosAstraZeneca);
 
+//Creamos un conjunto con los elementos de la diferencia entre los conjuntos de pfizer y astrazeneca
+HashSet<string> SoloPfizer = new HashSet<string>(CiudadanosPfizer);
+AmbasDosis.DifferenceWith(CiudadanosAstraZeneca);
+
+//Creamos un conjunto con los elementos de la diferencia entre los conjuntos de astrazeneca y pfizer
+HashSet<string> SoloAstraZeneca = new HashSet<string>(CiudadanosAstraZeneca);
+AmbasDosis.IntersectWith(CiudadanosPfizer);
+
 //Imprimir en pantalla las listas correspondientes
 System.Console.WriteLine("==========================Ciudadanos No Vacunados==========================");
 System.Console.WriteLine("");
@@ -48,7 +56,7 @@ System.Console.WriteLine("");
 
 System.Console.WriteLine("==========================Ciudadanos con Pfizer==========================");
 System.Console.WriteLine("");
-foreach (var c in CiudadanosPfizer)
+foreach (var c in SoloPfizer)
 {
     System.Console.WriteLine(c);
 }
@@ -56,7 +64,7 @@ System.Console.WriteLine("");
 
 System.Console.WriteLine("==========================Ciudadanos con AstraZeneca=========================");
 System.Console.WriteLine("");
-foreach (var c in CiudadanosAstraZeneca)
+foreach (var c in SoloAstraZeneca)
 {
     System.Console.WriteLine(c);
 }
