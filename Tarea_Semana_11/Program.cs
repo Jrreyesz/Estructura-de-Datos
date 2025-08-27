@@ -21,13 +21,14 @@ void traducirFrase()
 {
     System.Console.WriteLine("Escriba la frase que desea traducir:");
     string frase = Console.ReadLine();
+    string frasetraducida = frase;
 
     foreach (KeyValuePair<string, string> palabra in palabrasIngles)
-    {
-        frase.Replace(palabra.Value, palabra.Key);
-    }
+        {
+            frasetraducida = frasetraducida.Replace(palabra.Value, palabra.Key);
+        }
 
-    System.Console.WriteLine($"La frase traducida es: {frase}");
+    System.Console.WriteLine($"La frase traducida es: {frasetraducida}");
 }
 
 void agregarPalabra()
