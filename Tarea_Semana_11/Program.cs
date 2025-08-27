@@ -26,3 +26,31 @@ void agregarPalabra()
     palabrasIngles.Add(palabraClave, palabraValor);
 }
 
+
+while (True)
+{
+    System.Console.WriteLine("=========================Menú=========================");
+    System.Console.WriteLine("1. Traducir una frase");
+    System.Console.WriteLine("2. Agregar palabras al diccionario");
+    System.Console.WriteLine("3. Salir");
+
+    string opcion = Console.ReadLine();
+
+    if (opcion == "1")
+    {
+        System.Console.WriteLine("Aun no esta hecho");
+    }
+    else if (opcion == "2")
+    {
+        agregarPalabra();
+    }
+    else if (opcion == "3")
+    {
+        break;
+    }
+    else
+    {
+        System.Console.WriteLine("Opción Incorrecta, elija una opción correcta.");
+    }
+
+}
