@@ -18,7 +18,7 @@ Dictionary<string, string> palabrasIngles = new Dictionary<string, string>
     {"week", "semana"}
 };
 
-foreach (var v in palabrasIngles.Values())
+foreach (var v in palabrasIngles.Values)
 {
     System.Console.WriteLine(v);
 }
