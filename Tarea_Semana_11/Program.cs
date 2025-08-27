@@ -20,9 +20,9 @@
 static void agregarPalabra()
 {
     System.Console.WriteLine("Escriba la palabra que desea agregar en inglés:");
-    string palabraClave = Console.ReadLine;
+    string palabraClave = Console.ReadLine();
     System.Console.WriteLine("Escriba la palabra en español:");
-    string palabraValor = Console.ReadLine;
+    string palabraValor = Console.ReadLine();
     palabrasIngles.Add(palabraClave, palabraValor);
 }
 
