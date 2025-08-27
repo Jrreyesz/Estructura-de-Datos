@@ -17,7 +17,7 @@
     {"week", "semana"}
 };
 
-static void agregarPalabra()
+void agregarPalabra()
 {
     System.Console.WriteLine("Escriba la palabra que desea agregar en inglés:");
     string palabraClave = Console.ReadLine();
