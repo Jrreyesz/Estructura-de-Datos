@@ -64,7 +64,7 @@ while (true)
 
     if (opcion == "1")
     {
-        System.Console.WriteLine("Aun no esta hecho");
+        traducirFrase();
     }
     else if (opcion == "2")
     {
