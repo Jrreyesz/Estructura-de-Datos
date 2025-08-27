@@ -17,6 +17,17 @@
     {"week", "semana"}
 };
 
+void traducirFrase()
+{
+    System.Console.WriteLine("Escriba la frase que desea traducir:");
+    string frase = Console.ReadLine();
+
+    foreach (KeyValuePair<string, string> palabra in palabrasIngles)
+    {
+        frase.Replace(palabra.Value, palabra.Key);
+    }
+}
+
 void agregarPalabra()
 {
     System.Console.WriteLine("Escriba la palabra que desea agregar en inglés:");
