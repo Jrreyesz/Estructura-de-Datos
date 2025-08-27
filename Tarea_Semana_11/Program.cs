@@ -1,5 +1,4 @@
-﻿
-Dictionary<string, string> palabrasIngles = new Dictionary<string, string>
+﻿Dictionary<string, string> palabrasIngles = new Dictionary<string, string>
 {
     {"time", "tiempo"},
     {"person", "persona"},
@@ -18,7 +17,12 @@ Dictionary<string, string> palabrasIngles = new Dictionary<string, string>
     {"week", "semana"}
 };
 
-foreach (var v in palabrasIngles.Values)
+static void agregarPalabra()
 {
-    System.Console.WriteLine(v);
+    System.Console.WriteLine("Escriba la palabra que desea agregar en inglés:");
+    palabraClave = Console.ReadLine;
+    System.Console.WriteLine("Escriba la palabra en español:");
+    palabraValor = Console.ReadLine;
+    palabrasIngles.Add(palabraClave, palabrasValor);
 }
+
