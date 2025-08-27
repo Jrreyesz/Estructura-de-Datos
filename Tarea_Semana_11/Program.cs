@@ -26,6 +26,8 @@ void traducirFrase()
     {
         frase.Replace(palabra.Value, palabra.Key);
     }
+
+    System.Console.WriteLine($"La frase traducida es: {frase}");
 }
 
 void agregarPalabra()
