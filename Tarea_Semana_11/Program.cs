@@ -27,7 +27,7 @@ void agregarPalabra()
 }
 
 
-while (True)
+while (true)
 {
     System.Console.WriteLine("=========================Menú=========================");
     System.Console.WriteLine("1. Traducir una frase");
