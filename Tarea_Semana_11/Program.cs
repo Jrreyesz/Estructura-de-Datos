@@ -32,7 +32,7 @@ void consultarPalabra()
     string palaraBuscada = Console.ReadLine();
     if (palabrasIngles.ContainsKey(palaraBuscada.ToLower()))
     {
-        System.Console.WriteLine(palabrasIngles[palaraBuscada]);
+        System.Console.WriteLine($"La palabra existe, su traducción es: {palabrasIngles[palaraBuscada]}");
     }
     else
     {
