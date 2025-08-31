@@ -45,7 +45,7 @@ void agregarPalabra()
     System.Console.WriteLine("Escriba la palabra que desea agregar en inglés:");
     string palabraClave = Console.ReadLine();
 
-    if (claves.Contains(palabraClave))
+    if (claves.Contains(palabraClave.ToLower()))
     {
         System.Console.WriteLine("La palabra ya existe.");
     }
@@ -55,7 +55,8 @@ void agregarPalabra()
         System.Console.WriteLine("Escriba la palabra en español:");
         string palabraValor = Console.ReadLine();
         //Con el método Add agregamos el nuevo par clave - valor al diccionario
-        palabrasIngles.Add(palabraClave, palabraValor);
+        palabrasIngles.Add(palabraClave.ToLower(), palabraValor.ToLower());
+        System.Console.WriteLine("Palabra agregada con éxito.");
     }
 
 }
