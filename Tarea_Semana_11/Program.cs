@@ -40,11 +40,12 @@ void traducirFrase()
 //Creamos una función para agregar una palabra
 void agregarPalabra()
 {
+    //Creamos una lista con las claves del diccionario, nos ayudará a verificar si la palabra existe
     List<string> claves = palabrasIngles.Keys.ToList();
     //Pedimos al usuario la palabra que desea agregar en inglés y la almacenamos en una variable
     System.Console.WriteLine("Escriba la palabra que desea agregar en inglés:");
     string palabraClave = Console.ReadLine();
-
+    //Condicional para evaluar si la palabra existe o no
     if (claves.Contains(palabraClave.ToLower()))
     {
         System.Console.WriteLine("La palabra ya existe.");
