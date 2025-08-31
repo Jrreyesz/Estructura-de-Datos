@@ -26,7 +26,7 @@ void traducirFrase()
     //Almacenamos la frase en una variable
     string frase = Console.ReadLine();
     //Creamos una nueva variable para la frase traducida que inicie con la frase original
-    string frasetraducida = frase;
+    string frasetraducida = frase.ToLower();
 
     //Creamos un bucle para recorrer las claves y valores del diccionario
     foreach (KeyValuePair<string, string> palabra in palabrasIngles)
