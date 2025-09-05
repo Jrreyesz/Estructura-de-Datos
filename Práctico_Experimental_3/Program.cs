@@ -33,8 +33,12 @@ void verjugadoresregistrados()
 void registrarEquipo()
 {
     System.Console.WriteLine("Ingrese el nombre del equipo:");
-    string nombreequipo = Console.ReadLine();
+    string nombreequipo = Console.ReadLine().ToLower;
     equipos.Add(nombreequipo);
+    foreach (string e in equipos)
+    {
+        equiposyjugadores.Add(e, new List<string>());
+    }
 }
 
 void verequiposregistrados()
@@ -42,6 +46,21 @@ void verequiposregistrados()
     foreach (string e in equipos)
     {
         System.Console.WriteLine(e);
+    }
+}
+
+void añadiraequipo()
+{
+    System.Console.WriteLine("Ingrese el nombre del equipo:");
+    string nequipo = Console.ReadLine().ToLower();
+    if (equiposyjugadores.ContainsKey(nequipo))
+    {
+        System.Console.WriteLine("Escriba el ID del jugador que desea añadir:");
+        string idjugador = Console.ReadLine();
+        if (jugadores.ContainsKey(idjugador))
+        {
+            equiposyjugadores[nequipo].Add(jugadores[idjugador]);
+        }
     }
 }
 
@@ -53,7 +72,8 @@ while (true)
     System.Console.WriteLine("2. Ver jugadores registrados en la base de datos");
     System.Console.WriteLine("3. Registrar equipo");
     System.Console.WriteLine("4. Ver equipos registrados");
-    System.Console.WriteLine("5. Salir");
+    System.Console.WriteLine("5. Añadir un jugador a un equipo");
+    System.Console.WriteLine("6. Salir");
     System.Console.WriteLine("");
 
     System.Console.WriteLine("Elija una opción:");
@@ -76,6 +96,10 @@ while (true)
         verequiposregistrados();
     }
     else if (opcion == "5")
+    {
+        añadiraequipo();
+    }
+    else if (opcion == "6")
     {
         break;
     }
