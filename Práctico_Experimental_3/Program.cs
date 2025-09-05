@@ -5,9 +5,9 @@ Dictionary<string, List<string>> equiposyjugadores = new Dictionary<string, List
 void registrarjugadores()
 {
     System.Console.WriteLine("Ingrese el ID del jugador:");
-    string id = ConsoleReadLine();
+    string id = Console.ReadLine();
     System.Console.WriteLine("Ingrese el nombre del jugador:");
-    string nombrejugador = ConsoleReadLine();
+    string nombrejugador = Console.ReadLine();
 
     if (jugadores.ContainsKey(id))
     {
@@ -30,7 +30,7 @@ while (true)
     System.Console.WriteLine("");
 
     System.Console.WriteLine("Elija una opción:");
-    string opcion = ConsoleReadLine();
+    string opcion = Console.ReadLine();
 
     if (opcion == "1")
     {
