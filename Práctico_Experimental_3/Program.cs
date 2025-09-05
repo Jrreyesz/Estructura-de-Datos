@@ -37,7 +37,14 @@ void registrarEquipo()
     equipos.Add(nombreequipo);
     foreach (string e in equipos)
     {
-        equiposyjugadores.Add(e, new List<string>());
+        if (!equiposyjugadores.ContainsKey(e))
+        {
+            equiposyjugadores.Add(e, new List<string>());
+        }
+        else
+        {
+            continue;
+        }
     }
 }
 
