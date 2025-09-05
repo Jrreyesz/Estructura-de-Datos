@@ -33,7 +33,7 @@ void verjugadoresregistrados()
 void registrarEquipo()
 {
     System.Console.WriteLine("Ingrese el nombre del equipo:");
-    string nombreequipo = Console.ReadLine().ToLower;
+    string nombreequipo = Console.ReadLine().ToLower();
     equipos.Add(nombreequipo);
     foreach (string e in equipos)
     {
