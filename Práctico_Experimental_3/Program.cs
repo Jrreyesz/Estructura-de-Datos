@@ -68,6 +68,25 @@ void añadiraequipo()
         {
             equiposyjugadores[nequipo].Add(jugadores[idjugador]);
         }
+        else
+        {
+            System.Console.WriteLine("El ID del jugador no existe.");
+        }
+    }
+    else
+    {
+        System.Console.WriteLine("El nombre del equipo no existe.");
+    }
+}
+
+void jugadoresxEquipo()
+{
+    foreach (KeyValuePair<string, List<string>> jugadores in equiposyjugadores)
+    {
+        foreach (string jugador in jugadores.Value)
+        {
+            System.Console.WriteLine($"Equipo: {jugadores.Key}. Jugador: {jugador}");
+        }
     }
 }
 
