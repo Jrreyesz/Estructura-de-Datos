@@ -99,7 +99,8 @@ while (true)
     System.Console.WriteLine("3. Registrar equipo");
     System.Console.WriteLine("4. Ver equipos registrados");
     System.Console.WriteLine("5. Añadir un jugador a un equipo");
-    System.Console.WriteLine("6. Salir");
+    System.Console.WriteLine("6. Consultar equipos y sus jugadores");
+    System.Console.WriteLine("7. Salir");
     System.Console.WriteLine("");
 
     System.Console.WriteLine("Elija una opción:");
@@ -126,6 +127,10 @@ while (true)
         añadiraequipo();
     }
     else if (opcion == "6")
+    {
+        jugadoresxEquipo();
+    }
+    else if (opcion == "7")
     {
         break;
     }
