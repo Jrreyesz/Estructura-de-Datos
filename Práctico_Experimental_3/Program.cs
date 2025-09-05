@@ -1,17 +1,23 @@
-﻿Dictionary<string, string> jugadores = new Dictionary<string, string> { };
+﻿//Diccionario vacia para registrar jugadores con un id unico
+Dictionary<string, string> jugadores = new Dictionary<string, string> { };
+//Conjunto de equipos que evita que existan dos equipos iguales
 HashSet<string> equipos = new HashSet<string>();
+//Diccionario vacío que almacenara cada equipo con sus respectos jugadores en una lista
 Dictionary<string, List<string>> equiposyjugadores = new Dictionary<string, List<string>> { };
 
+//Función para registrar jugadores
 void registrarjugadores()
 {
     System.Console.WriteLine("Ingrese el ID del jugador:");
     string id = Console.ReadLine();
 
+    //Verifica que el ID no Exista
     if (jugadores.ContainsKey(id))
     {
         System.Console.WriteLine("El ID ingresado ya está registrado.");
         System.Console.WriteLine("");
     }
+    //Si el ID no existe, añade al jugador
     else
     {
         System.Console.WriteLine("Ingrese el nombre del jugador:");
@@ -22,8 +28,10 @@ void registrarjugadores()
     }
 }
 
+//Función para ver los jugadores registrados
 void verjugadoresregistrados()
 {
+    //Verifica que haya elementos para imnprimir
     if (jugadores.Count != 0)
     {
         foreach (KeyValuePair<string, string> jugador in jugadores)
@@ -38,13 +46,16 @@ void verjugadoresregistrados()
     
 }
 
+//Función para registrar un equipo y para que se añade como clave al diccionario equiposyjugadores, con una lista como valor
 void registrarEquipo()
 {
     System.Console.WriteLine("Ingrese el nombre del equipo:");
     string nombreequipo = Console.ReadLine().ToLower();
     equipos.Add(nombreequipo);
+    //Bucle para que los equipos se registren en el diccionario como clave única
     foreach (string e in equipos)
     {
+        //Evita que se repitan las claves en cada bucle
         if (!equiposyjugadores.ContainsKey(e))
         {
             equiposyjugadores.Add(e, new List<string>());
@@ -56,8 +67,11 @@ void registrarEquipo()
     }
 }
 
+
+//Función para ver los equipos registrados
 void verequiposregistrados()
 {
+    //Verifica si existen elementos 
     if (equipos.Count != 0)
     {
         foreach (string e in equipos)
@@ -72,14 +86,18 @@ void verequiposregistrados()
     
 }
 
+//Función para añadir un jugador a un equipo
 void añadiraequipo()
 {
+
     System.Console.WriteLine("Ingrese el nombre del equipo:");
     string nequipo = Console.ReadLine().ToLower();
+    //Verifica que exista el equipo
     if (equiposyjugadores.ContainsKey(nequipo))
     {
         System.Console.WriteLine("Escriba el ID del jugador que desea añadir:");
         string idjugador = Console.ReadLine();
+        //Verifica que exista el ID del jugador, si existe lo añade al equipo
         if (jugadores.ContainsKey(idjugador))
         {
             equiposyjugadores[nequipo].Add(jugadores[idjugador]);
@@ -95,12 +113,16 @@ void añadiraequipo()
     }
 }
 
+//Función para ver los equipos con sus jugadores
 void jugadoresxEquipo()
 {
+    //Verifica que existan elementos para visualizar
     if (equiposyjugadores.Count != 0)
     {
+        // Bucle para recorrer los elementos del diccionario
         foreach (KeyValuePair<string, List<string>> jugadores in equiposyjugadores)
         {
+            //Verifica que la lista de jugadores de los equipos esten con elementos
             if (jugadores.Value.Count != 0)
             {
                 foreach (string jugador in jugadores.Value)
@@ -110,9 +132,9 @@ void jugadoresxEquipo()
             }
             else
             {
-                System.Console.WriteLine("Existen equipos pero no tienen jugadores.");
+                System.Console.WriteLine($"El equipo {jugadores.Key} no tiene jugadores.");
             }
-            
+
         }
     }
     else
@@ -122,6 +144,8 @@ void jugadoresxEquipo()
     
 }
 
+
+//Menú para escribir las opciones 
 while (true)
 {
     System.Console.WriteLine("==========================Menú==========================");
