@@ -6,8 +6,6 @@ void registrarjugadores()
 {
     System.Console.WriteLine("Ingrese el ID del jugador:");
     string id = Console.ReadLine();
-    System.Console.WriteLine("Ingrese el nombre del jugador:");
-    string nombrejugador = Console.ReadLine();
 
     if (jugadores.ContainsKey(id))
     {
@@ -15,6 +13,8 @@ void registrarjugadores()
     }
     else
     {
+        System.Console.WriteLine("Ingrese el nombre del jugador:");
+        string nombrejugador = Console.ReadLine();
         jugadores.Add(id, nombrejugador);
         System.Console.WriteLine("El jugador fue registrado correctamente.");
     }
