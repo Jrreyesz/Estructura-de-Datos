@@ -101,15 +101,23 @@ void jugadoresxEquipo()
     {
         foreach (KeyValuePair<string, List<string>> jugadores in equiposyjugadores)
         {
-            foreach (string jugador in jugadores.Value)
+            if (jugadores.Value.Count != 0)
             {
-                System.Console.WriteLine($"Equipo: {jugadores.Key}. Jugador: {jugador}");
+                foreach (string jugador in jugadores.Value)
+                {
+                    System.Console.WriteLine($"Equipo: {jugadores.Key}. Jugador: {jugador}");
+                }
             }
+            else
+            {
+                System.Console.WriteLine("Existen equipos pero no tienen jugadores.");
+            }
+            
         }
     }
     else
     {
-        System.Console.WriteLine("No hay jugadores con equipo registrados.");
+        System.Console.WriteLine("No equipos registrados.");
     }
     
 }
