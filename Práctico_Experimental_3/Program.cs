@@ -24,10 +24,18 @@ void registrarjugadores()
 
 void verjugadoresregistrados()
 {
-    foreach (KeyValuePair<string, string> jugador in jugadores)
+    if (jugadores.Count != 0)
     {
-        System.Console.WriteLine($"Jugador {jugador.Value}, con ID {jugador.Key}");
+        foreach (KeyValuePair<string, string> jugador in jugadores)
+        {
+            System.Console.WriteLine($"Jugador {jugador.Value}, con ID {jugador.Key}");
+        }
     }
+    else
+    {
+        System.Console.WriteLine("No hay jugadores registrados.");
+    }
+    
 }
 
 void registrarEquipo()
@@ -50,10 +58,18 @@ void registrarEquipo()
 
 void verequiposregistrados()
 {
-    foreach (string e in equipos)
+    if (equipos.Count != 0)
     {
-        System.Console.WriteLine(e);
+        foreach (string e in equipos)
+        {
+            System.Console.WriteLine(e);
+        }
     }
+    else
+    {
+        System.Console.WriteLine("No hay equipos registrados.");
+    }
+    
 }
 
 void añadiraequipo()
@@ -81,13 +97,21 @@ void añadiraequipo()
 
 void jugadoresxEquipo()
 {
-    foreach (KeyValuePair<string, List<string>> jugadores in equiposyjugadores)
+    if (equiposyjugadores.Count != 0)
     {
-        foreach (string jugador in jugadores.Value)
+        foreach (KeyValuePair<string, List<string>> jugadores in equiposyjugadores)
         {
-            System.Console.WriteLine($"Equipo: {jugadores.Key}. Jugador: {jugador}");
+            foreach (string jugador in jugadores.Value)
+            {
+                System.Console.WriteLine($"Equipo: {jugadores.Key}. Jugador: {jugador}");
+            }
         }
     }
+    else
+    {
+        System.Console.WriteLine("No hay jugadores con equipo registrados.");
+    }
+    
 }
 
 while (true)
@@ -133,5 +157,9 @@ while (true)
     else if (opcion == "7")
     {
         break;
+    }
+    else
+    {
+        System.Console.WriteLine("Opción Incorrecta, intente de nuevo.");
     }
 }
