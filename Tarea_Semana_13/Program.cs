@@ -1,9 +1,9 @@
-﻿List<string> revistas = new List<string>{"Full Deportes", "Todo Moda", "Auto Deporte", "Vanguardia", "TIC Relevance", "Ciencia Simplificada", "Historia Curiosa", "Vestigios del Pasado", "Psicología de la Vida", "Mascota Amigable"};
+﻿List<string> revistas = new List<string>{"full deportes", "todo moda", "auto deporte", "vanguardia", "tic relevance", "ciencia simplificada", "historia curiosa", "vestigios del pasado", "psicología de la vida", "mascota amigable"};
 
 void ingresarRevista()
 {
     System.Console.WriteLine("Ingrese el nombre de la revista: ");
-    string nombreRevista = Console.ReadLine().ToTitleCase();
+    string nombreRevista = Console.ReadLine().ToLower();
 
     if (!revistas.Contains(nombreRevista))
     {
@@ -21,7 +21,7 @@ int indice = 0;
 string buscarRevista()
 {
     System.Console.WriteLine("Ingrese el nombre de la revista que desea buscar:");
-    string nombreRevista = Console.ReadLine().ToTitleCase();
+    string nombreRevista = Console.ReadLine().ToLower();
 
 
     if (indice < revistas.Count())
@@ -34,6 +34,7 @@ string buscarRevista()
         {
             indice += 1;
             buscarRevista();
+            return;
         }
     }
     else
