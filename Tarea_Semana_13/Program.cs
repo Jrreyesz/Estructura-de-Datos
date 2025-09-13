@@ -34,7 +34,7 @@ string buscarRevista()
         {
             indice += 1;
             buscarRevista();
-            return;
+            return "";
         }
     }
     else
