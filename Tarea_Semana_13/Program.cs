@@ -20,9 +20,11 @@ int indice = 0;
 
 string buscarRevista()
 {
-    System.Console.WriteLine("Ingrese el nombre de la revista que desea buscar:");
-    string nombreRevista = Console.ReadLine().ToLower();
-
+    if (indice == 0)
+    {
+        System.Console.WriteLine("Ingrese el nombre de la revista que desea buscar:");
+        string nombreRevista = Console.ReadLine().ToLower();
+    }
 
     if (indice < revistas.Count())
     {
