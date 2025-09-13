@@ -20,12 +20,12 @@ void ingresarBusqueda()
 {
     System.Console.WriteLine("Ingrese el nombre de la revista que desea buscar:");
     string nombreRevista = Console.ReadLine().ToLower();
-    buscarRevista(revistas.Count(), nombreRevista);
+    buscarRevista(0, nombreRevista);
 }
 
 void buscarRevista(int indice, string nRevista)
 {
-    if (indice > 0)
+    if (indice > revistas.Count())
     {
         if (revistas[indice] == nRevista)
         {
@@ -33,7 +33,7 @@ void buscarRevista(int indice, string nRevista)
         }
         else
         {
-            buscarRevista(indice-1, nRevista);
+            buscarRevista(indice + 1, nRevista);
         }
     }
     else
