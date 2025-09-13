@@ -25,7 +25,7 @@ void ingresarBusqueda()
 
 void buscarRevista(int indice, string nRevista)
 {
-    if (indice > revistas.Count())
+    if (indice < revistas.Count())
     {
         if (revistas[indice] == nRevista)
         {
