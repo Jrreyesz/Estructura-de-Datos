@@ -3,7 +3,7 @@
 void ingresarRevista()
 {
     System.Console.WriteLine("Ingrese el nombre de la revista: ");
-    string nombreRevista = Console.ReadLine().TToTitleCase();
+    string nombreRevista = Console.ReadLine().ToTitleCase();
 
     if (!revistas.Contains(nombreRevista))
     {
@@ -18,27 +18,27 @@ void ingresarRevista()
 
 int indice = 0;
 
-string buscarRevista(string nRevista)
+string buscarRevista()
 {
     System.Console.WriteLine("Ingrese el nombre de la revista que desea buscar:");
-    string nombreRevista = Console.ReadLine().TToTitleCase();
+    string nombreRevista = Console.ReadLine().ToTitleCase();
 
 
     if (indice < revistas.Count())
     {
         if (revistas[indice] == nombreRevista)
         {
-            System.Console.WriteLine($"La revista {nRevista} fue encontrada.");
+            return $"La revista {nombreRevista} fue encontrada.";
         }
         else
         {
             indice += 1;
-            buscarRevista(revistas[indice]);
+            buscarRevista();
         }
     }
     else
     {
-        System.Console.WriteLine("Revista no encontrada.");
+        return $"Revista {nombreRevista} no fue encontrada.";
     }
 }
 
