@@ -33,7 +33,7 @@ void buscarRevista(int indice, string nRevista)
         }
         else
         {
-            buscarRevista(revistas[indice-1], nRevista);
+            buscarRevista(indice-1, nRevista);
         }
     }
     else
@@ -58,7 +58,7 @@ while (true)
     }
     else if (opcion == "2")
     {
-        buscarRevista();
+        buscarRevista(0, "NADA");
     }
     else if (opcion == "3")
     {
