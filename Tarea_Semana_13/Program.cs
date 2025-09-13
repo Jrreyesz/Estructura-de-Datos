@@ -58,7 +58,7 @@ while (true)
     }
     else if (opcion == "2")
     {
-        buscarRevista(0, "NADA");
+        ingresarBusqueda(0, "NADA");
     }
     else if (opcion == "3")
     {
