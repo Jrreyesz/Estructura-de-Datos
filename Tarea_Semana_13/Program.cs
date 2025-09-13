@@ -16,32 +16,29 @@ void ingresarRevista()
     }
 }
 
-int indice = 0;
-
-string buscarRevista()
+void ingresarBusqueda()
 {
-    if (indice == 0)
-    {
-        System.Console.WriteLine("Ingrese el nombre de la revista que desea buscar:");
-        string nombreRevista = Console.ReadLine().ToLower();
-    }
+    System.Console.WriteLine("Ingrese el nombre de la revista que desea buscar:");
+    string nombreRevista = Console.ReadLine().ToLower();
+    buscarRevista(revistas.Count(), nombreRevista);
+}
 
-    if (indice < revistas.Count())
+void buscarRevista(int indice, string nRevista)
+{
+    if (indice > 0)
     {
-        if (revistas[indice] == nombreRevista)
+        if (revistas[indice] == nRevista)
         {
-            return $"La revista {nombreRevista} fue encontrada.";
+        System.Console.WriteLine($"La revista {nRevista} fue encontrada."); 
         }
         else
         {
-            indice += 1;
-            buscarRevista();
-            return "";
+            buscarRevista(revistas[indice-1], nRevista);
         }
     }
     else
     {
-        return $"Revista {nombreRevista} no fue encontrada.";
+        System.Console.WriteLine($"Revista {nRevista} no fue encontrada."); 
     }
 }
 
