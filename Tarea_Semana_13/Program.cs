@@ -58,7 +58,7 @@ while (true)
     }
     else if (opcion == "2")
     {
-        ingresarBusqueda(0, "NADA");
+        ingresarBusqueda();
     }
     else if (opcion == "3")
     {
