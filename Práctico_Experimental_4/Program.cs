@@ -2,8 +2,10 @@
 {
     public static void Main(string[] args)
     {
+        //Creamos el abrol binario de búsqueda
         var arbol = new ArbolBinario();
 
+        //Creamos un diccionario para almacenar los valores de los vuelos
         Dictionary<string, int> vuelos = new Dictionary<string, int>
         {
             {"Iberia", 950},
@@ -28,13 +30,21 @@
             {"Avianca", 980}
         };
 
+        //Con la ayuda de un bucle recorremos los precios de 
         foreach (int precio in vuelos.Values)
         {
             arbol.Insertar(precio);
         }
 
         string menorValor = arbol.menorPrecio();
-        System.Console.WriteLine(menorValor);
+
+        foreach (string aerolinea in vuelos.Keys)
+        {
+            if (aerolinea.Value == menorValor)
+            {
+                System.Console.WriteLine($"La aerolínea con el vuelo más económico es {aerolinea} con un valor de {menorValor}.");
+            }
+        }
     }
 }
 

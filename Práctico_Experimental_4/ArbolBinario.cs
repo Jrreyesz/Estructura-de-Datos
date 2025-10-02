@@ -39,7 +39,7 @@ public class ArbolBinario
             nodoActual = nodoActual.Izquierdo;
         }
 
-        return $"El vuelo con menor precio es {nodoActual.Valor}";
+        return nodoActual.Valor;
     }
 }
 
