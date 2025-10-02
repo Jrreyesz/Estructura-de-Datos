@@ -38,11 +38,11 @@
 
         int menorValor = arbol.menorPrecio();
 
-        foreach (string aerolinea in vuelos.Keys)
+        foreach (KeyValuePair<string, int> vuelo in vuelos)
         {
-            if (aerolinea.Value == menorValor)
+            if (vuelo.Value == menorValor)
             {
-                System.Console.WriteLine($"La aerolínea con el vuelo más económico es {aerolinea} con un valor de {menorValor}.");
+                System.Console.WriteLine($"La aerolínea con el vuelo más económico es {vuelo.Key} con un valor de {menorValor}.");
             }
         }
     }

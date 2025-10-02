@@ -30,7 +30,7 @@ public class ArbolBinario
         return nodoActual;
     }
 
-    public string menorPrecio()
+    public int menorPrecio()
     {
         Nodo nodoActual = Raiz;
 
