@@ -22,3 +22,8 @@
     {"Avianca", 980}
 };
 
+foreach (int precio in vuelos.Values)
+{
+    Insertar(precio);
+}
+
