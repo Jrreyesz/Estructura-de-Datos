@@ -29,5 +29,17 @@ public class ArbolBinario
         }
         return nodoActual;
     }
+
+    public string menorPrecio()
+    {
+        Nodo nodoActual = Raiz;
+
+        while (nodoActual.Izquierdo != null)
+        {
+            nodoActual = nodoActual.Izquierdo;
+        }
+
+        return $"El vuelo con menor precio es {nodoActual.Valor}";
+    }
 }
 

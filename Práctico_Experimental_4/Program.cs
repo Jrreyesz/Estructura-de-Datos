@@ -33,6 +33,7 @@
             arbol.Insertar(precio);
         }
 
+        arbol.menorPrecio();
     }
 }
 
