@@ -1,4 +1,6 @@
-﻿var abol = new ArbolBinario();
+﻿using System;
+
+var arbol = new ArbolBinario();
 
 Dictionary<string, int> vuelos = new Dictionary<string, int>
 {
