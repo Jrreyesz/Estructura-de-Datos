@@ -32,12 +32,14 @@
 
         //Con la ayuda de un bucle recorremos los precios de 
         foreach (int precio in vuelos.Values)
-        {
+        {   
+            //Con la función insertar, insertamos todos los valores de los vuelos
             arbol.Insertar(precio);
         }
-
+        //Llamamos a la función para encontrar el menor valor del arbol y la almacenamos en una variable
         int menorValor = arbol.menorPrecio();
 
+        //Encontramos a qué aerolínea pertenece el precio más bajp
         foreach (KeyValuePair<string, int> vuelo in vuelos)
         {
             if (vuelo.Value == menorValor)
