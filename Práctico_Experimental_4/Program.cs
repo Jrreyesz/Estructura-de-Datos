@@ -3,7 +3,7 @@
     public static void Main(string[] args)
     {
         var arbol = new ArbolBinario();
-        
+
         Dictionary<string, int> vuelos = new Dictionary<string, int>
         {
             {"Iberia", 950},
@@ -30,7 +30,7 @@
 
         foreach (int precio in vuelos.Values)
         {
-            Insertar(precio);
+            arbol.Insertar(precio);
         }
 
     }
