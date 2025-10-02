@@ -36,7 +36,7 @@
             arbol.Insertar(precio);
         }
 
-        string menorValor = arbol.menorPrecio();
+        int menorValor = arbol.menorPrecio();
 
         foreach (string aerolinea in vuelos.Keys)
         {
