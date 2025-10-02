@@ -1,4 +1,6 @@
-﻿Dictionary<string, int> vuelos = new Dictionary<string, int>
+﻿var abol = new ArbolBinario();
+
+Dictionary<string, int> vuelos = new Dictionary<string, int>
 {
     {"Iberia", 950},
     {"Brittish Airways", 150},
