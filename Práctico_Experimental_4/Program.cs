@@ -33,7 +33,8 @@
             arbol.Insertar(precio);
         }
 
-        arbol.menorPrecio();
+        string menorValor = arbol.menorPrecio();
+        System.Console.WriteLine(menorValor);
     }
 }
 
